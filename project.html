@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Index</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <style>
+        /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #444;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+   from {
+       opacity: 0;
+       transform: translateY(-20px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+     
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #777;
+}
+
+.projects-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+ 
+}
+
+.project-card {
+    background-color: transparent;
+  height: 370px;
+  width: 400px;
+  margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+
+
+}
+
+.project-card:hover {
+    transform: translateX(-10px);
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.project-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    background-color: #005bb5;
+    border:  2px solid silver;
+}
+.otherprojecs{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    text-align: center;
+}
+    </style>
+
+    <header>
+        <h1>My Projects</h1>
+        <p>Explore the projects I've worked on below.</p>
+    </header>
+
+
+
+
+    <main>
+        <section id="projects-list" class="projects-container">
+            <!-- Projects will be populated here by JavaScript -->
+        </section>
+
+        <div class="otherprojecs">
+            <h2>Other Basic to Advance projects ..... </h2>
+ 
+        </div>
+        <h3>©2025 - Happy_Coder Full_Stack_Web_Developer</h3>
+    </main>
+
+    <script>
+        // Example project data (you can fetch from a server or database in real cases)
+const projects = [
+    {
+        title: "Tailors Shop",
+        description: "Tailor Shop website with reponsive and classic",
+        link: "https://itssonutime.github.io/sptailors.jp/",
+        Img: "Screenshot (207).png"
+    },
+    {
+        title: "KBC Game",
+        description: "KBC Game with animated and responsive",
+        link: "https://itssonutime.github.io/kbc-game/",
+           Img: "Screenshot (214).png"
+    },
+    {
+        title: "Dice Rolling Game",
+        description: "Dice Rolling Game with score counting and responsive , animated .",
+        link: "https://itssonutime.github.io/dice-score-game/",
+           Img: "Screenshot (225).png"
+    },
+
+
+    {
+        title: "Tic Tac Toe Game",
+        description: "Tic Tac Toe game with responsive",
+        link: "https://itssonutime.github.io/tic-tac-teo-2-/",
+        Img: "Screenshot (269).png"
+    },
+    {
+        title: "Timer Counter",
+        description: "Timer counter with bight color and responsive",
+        link: "https://itssonutime.github.io/timer_counter/",
+           Img: "Screenshot (263).png"
+    },
+    {
+        title: "Qoute Genrator",
+        description: "Qoute Gnerator and responsive .",
+        link: "https://itssonutime.github.io/Qouteoftheapi//",
+           Img: "Screenshot (257).png"
+    },
+
+
+
+    {
+        title: "Image Search App",
+        description: "Image Search App  responsive",
+        link: "https://itssonutime.github.io/Image_Search_App/",
+           Img: "Screenshot (231).png"
+    },
+    {
+        title: "Calculator App",
+        description: "Calculator App With Responsive",
+        link: "https://itssonutime.github.io/calculators/",
+           Img: "Screenshot (217).png"
+    },
+    {
+        title: "Password Genrator",
+        description: "Password Genrator and 12 charactors with Number, symbols , and others ",
+        link: "https://itssonutime.github.io/PasswordGenrators/",
+           Img: "Screenshot (270).png"
+    },
+
+
+
+    
+
+   
+    
+];
+
+// Function to populate projects dynamically
+function displayProjects() {
+    const projectsContainer = document.getElementById('projects-list');
+
+    projects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('project-card');
+
+        projectCard.innerHTML = `
+            <h2 class="project-title">${project.title}</h2>
+            <p class="project-description">${project.description}</p>
+             <img src="${project.Img}" height="200px" width = "100%"  >
+                 <a href="${project.link}" class="project-link" target="_blank"  style="background-color: transparent
+    ;">View Project</a>
+          
+          
+            
+        `;
+
+        projectsContainer.appendChild(projectCard);
+    });
+}
+
+// Run display on page load
+window.onload = displayProjects;
+
+    </script>
+</body>
+</html>

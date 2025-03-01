@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="strle.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                            viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg></a></li>
+                        <li><a href="index.html">Home</a></li>
+                <li><a href="project.html">projects</a></li>
+                <li><a href="contact.html">contact-me</a></li>
+
+                <li><a href="about.html">About</a></li>
+
+            </ul>
+
+
+
+
+            <ul>
+
+                <li><a href="#">Happy_Coder </a></li>
+
+                <li class="hideOnMobile"><a href="project.html">projects</a></li>
+                <li class="hideOnMobile"><a href="contact.html">contact-me</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+
+                <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg></a></li>
+            </ul>
+        </nav>
+        <div class="tittle">
+            <marquee behavior="alternate" scrollamount="7">
+                <p id="para">Welcome to My Portfolio</p>
+            </marquee>
+
+            <button> <a href="contact.html">Contact Us</a></button>
+
+        </div>
+
+    </header>
+
+    <h2>Experience</h2>
+    <div class="slider-container">
+
+        <div class="slide active" id="slider">
+
+            <div class="image-section">
+
+                <img src="Screenshot (207).png" alt="Image">
+            </div>
+            <div class="text-section">
+                <h2>Tailors Shop Web</h2>
+                <p>Fronted page Made a HTMl CSS Java Script <br> With Loading page</p>
+                <button style="background:black; color:white; padding:10px; border:none; cursor:pointer;"><a
+                        href=" https://itssonutime.github.io/sptailors.jp/">Learn More</a></button>
+            </div>
+        </div>
+        <button class="nav-button prev" onclick="prevSlide()">&#10094;</button>
+        <button class="nav-button next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+
+
+    <div class="slider-container">
+
+        <div class="slide active" id="slider1">
+
+
+            <div class="text-section">
+                <h2>KBC Game</h2>
+                <p>Fronted Page HTML ANIMATED CSS AND <br> JAVA SCRIPT </p>
+                <button style="background:black; color:white; padding:10px; border:none; cursor:pointer;"><a
+                        href="https://itssonutime.github.io/kbc-game/">Learn More</a></button>
+            </div>
+            <div class="image-section">
+
+                <img src="Screenshot (214).png" alt="Image">
+            </div>
+        </div>
+        <button class="nav-button1 prev1" onclick="prevSlide1()">&#10094;</button>
+        <button class="nav-button1 next1" onclick="nextSlide1()">&#10095;</button>
+    </div>
+
+
+    <div class="slider-container">
+
+        <div class="slide active" id="slider2">
+
+            <div class="image-section">
+
+                <img src="Screenshot (221).png" alt="Image">
+            </div>
+            <div class="text-section">
+                <h2>Dice Rolling Game</h2>
+                <p>Fronted Page HTML CSS AND Backend use to <br> JAVA SCRIPT </p>
+                <button style="background:black; color:white; padding:10px; border:none; cursor:pointer;"><a
+                        href=" https://itssonutime.github.io/dice-score-game/">Learn More</a></button>
+            </div>
+
+        </div>
+        <button class="nav-button1 prev3" onclick="prevSlide2()">&#10094;</button>
+        <button class="nav-button1 next3" onclick="nextSlide2()">&#10095;</button>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h2>What Our Clients Say</h2>
+
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <img src="WhatsApp Image 2025-02-12 at 21.46.13_e9e10f50.jpg" alt="Client Image">
+                <div>
+                    <h3>I'm Sonu Gautam full stack web Developer</h3>
+                    <p>Happy_coder exceeded our expectations with their customized software solution, significantly
+                        improving our operational efficiency.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-content">
+                <img src="WhatsApp Image 2025-02-15 at 23.26.46_0042f9cc.jpg" alt="Client Image">
+                <div>
+                    <h3> I' am Web application Editor and Builder</h3>
+                    <p>The team at Happy_coder displayed exceptional creativity and professionalism in delivering our
+                        web application on time and within budget.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- <div class="boxes">
+    <div class="box">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968333.png" alt="" srcset="" style="background-color: black;">
+      <p>I Get 100% HTML Language and I can create a web page on animated and classic and i have create a lot of web page by doing HTNL like in Example - Amazon , Flipkart , Netflix , Meesho
+        and a Spotify and ALL other types of 
+      </p>
+    </div>
+    <div class="box">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968305.png" alt="" srcset=""  style="background-color: black;">
+        <p>I Get 100% CSS Language  I have create a lot of animated and responsive  and very Classic web Page by doing it .</p>
+    </div>  <div class="box">
+        <img src="https://img.icons8.com/ios7/512/FFFFFF/javascript-logo.png" alt="" srcset="" style="background-color: black;" >
+        <p>I Get 100% Java Script Language I have create a lot of project in Java Script and i learn java script beginner to Advance Level Basic like a what is js , Variables ,Datatype , operators and Conditional Statement , and others basic and FPI fetch async await objects and classic </p>
+    </div>  <div class="box">
+        <img src="react_logo-removebg-preview.png" alt="" srcset="" style="background-color: black;" >
+        <p>React.JS have just start</p>
+    </div>
+   </div> -->
+
+
+    <div class="container1">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968333.png" alt="Consultation and Strategy"
+                style="background-color: black;">
+            <p>I Get 100% HTML Language and I can create a web page on animated and classic and i have create a lot of
+                web page by doing HTNL like in Example - Amazon , Flipkart , Netflix , Meesho
+                and a Spotify and ALL other types of
+            </p>
+            <span class="more-text">Our process begins with understanding your unique needs and goals...</span>
+            <button class="btn" onclick="toggleText(this)">Read More</button>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968305.png" alt="Design and Prototyping"
+                style="background-color: black;">
+            <p>I Get 100% CSS Language I have create a lot of animated and responsive and very Classic web Page by doing
+                it .</p>
+            <span class="more-text">We believe that great design is central to user satisfaction...</span>
+            <button class="btn" onclick="toggleText(this)">Read More</button>
+        </div>
+        <div class="card">
+            <img src="https://img.icons8.com/ios7/512/FFFFFF/javascript-logo.png" alt="Implementation and Support"
+                style="background-color: black;">
+            <p>I Get 100% Java Script Language I have create a lot of project in Java Script and i learn java script
+                beginner to Advance Level Basic like a what is js , Variables ,Datatype , operators and Conditional
+                Statement , and others basic and FPI fetch async await objects and classic </p>
+            <span class="more-text">Once the design is approved, our development team brings your project to
+                life...</span>
+            <button class="btn" onclick="toggleText(this)">Read More</button>
+        </div>
+
+        <div class="card">
+            <img src="react_logo-removebg-preview.png" alt="Implementation and Support"
+                style="background-color: black;">
+            <p>React.JS have just start</p>
+            <span class="more-text">Once the design is approved, our development team brings your project to
+                life...</span>
+            <button class="btn" onclick="toggleText(this)">Read More</button>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="logos">
+            <a href="https://www.facebook.com/profile.php?id=61569014775444"> <img
+                    src="https://www.citypng.com/public/uploads/preview/round-black-facebook-fb-logo-icon-sign-701751695134781upkxjlqwck.png"
+                    alt="" height="40px"></a>
+            <a href="https://www.instagram.com/techsonu360/"> <img
+                    src="https://www.citypng.com/public/uploads/preview/black-and-white-outline-instagram-app-logo-icon-7017516951369307x990iaok2.png"
+                    alt="" height="50px"></a>
+            <a href="https://www.linkedin.com/in/sonu-tech-ba0738348/"> <img
+                    src="https://banner2.cleanpng.com/20180518/yk/avraxewhx.webp" alt="" srcset="" height="50px"></a>
+            <a href="https://github.com/ItsSonuTime"> <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                    alt="" srcset="" height="50px"></a>
+        </div>
+
+        <h3>©2025 - Happy_Coder Full_Stack_Web_Developer</h3>
+
+
+    </footer>
+
+    <script>
+
+        let currentIndex = 0;
+
+
+
+        const slides = [
+            {
+                image: "Screenshot (207).png",
+                title: "Tailors Shop Web ",
+                description: "Fronted page Made a  HTMl CSS Java Script  With Loading page"
+            },
+            {
+                image: "Screenshot (208).png",
+                title: "Fronted page",
+                description: "classic page with classic navbar with List bar"
+            },
+
+            {
+                image: "Screenshot (209).png",
+                title: "Products Page with cart",
+                description: "Responsive with  classic and stylist Cart bar"
+            },
+
+            {
+                image: "Screenshot (210).png",
+                title: "About Page",
+                description: "Abouts and our Introduction"
+            },
+            {
+                image: "Screenshot (211).png",
+                title: "Products Page",
+                description: "Stylist Cart bar"
+            },
+            {
+                image: "Screenshot (213).png",
+                title: "Contact From page",
+                description: "contact form with very classic"
+            }
+        ];
+
+        function updateSlide() {
+            const slider = document.getElementById("slider");
+            slider.classList.remove("active");
+            setTimeout(() => {
+                slider.innerHTML = `
+                    <div class="image-section">
+                        <img src="${slides[currentIndex].image}" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h2>${slides[currentIndex].title}</h2>
+                        <p>${slides[currentIndex].description}</p>
+                        <button style="background:black; color:white; padding:10px; border:none; cursor:pointer;"><a href=" https://itssonutime.github.io/sptailors.jp/">Learn More</a></button>
+                      
+                    </div>
+                `;
+                slider.classList.add("active");
+            }, 500);
+        }
+        let currentIndex2 = 0;
+        let slides2 = [
+            {
+                image: "Screenshot (214).png",
+                title: "KBC Game",
+                description: "Fronted Page HTML ANIMATED CSS AND <br> JAVA SCRIPT",
+            },
+            {
+                image: "Screenshot (215).png",
+                title: "Loading Page",
+                description: "Loading page  Made a HTML CSS Java Script."
+            },
+
+            {
+                image: "Screenshot (216).png",
+                title: "Game Play Page",
+                description: "Game page Made a HTML CSS Java Script."
+            },
+
+
+        ];
+
+
+        function updateSlide2() {
+            const slider = document.getElementById("slider1");
+            slider.classList.remove("active");
+            setTimeout(() => {
+                slider.innerHTML = `
+              
+                    <div class="text-section">
+                        <h2>${slides2[currentIndex2].title}</h2>
+                        <p>${slides2[currentIndex2].description}</p>
+                         <button style="background:black; color:white; padding:10px; border:none; cursor:pointer;"><a href="https://itssonutime.github.io/kbc-game/">Learn More</a></button>
+                    </div>
+                          <div class="image-section">
+                        <img src="${slides2[currentIndex2].image}" alt="Image">
+                    </div>
+                `;
+                slider.classList.add("active");
+            }, 500);
+        }
+
+
+        let currentIndex3 = 0;
+        let slides3 = [
+            {
+                image: "Screenshot (221).png",
+                title: "DICE Rolling Game",
+                description: "Fronted Page HTML CSS AND  Backend use to <br> JAVA SCRIPT ",
+            },
+            {
+                image: "Screenshot (222).png",
+                title: "Choices Name ",
+                description: "Choices Name Made a HTML CSS Java Script."
+            },
+
+            {
+                image: "Screenshot (224).png",
+                title: "Choices Name " + 2,
+                description: "Choices Name 2 Made a HTML CSS Java Script."
+            },
+
+            {
+                image: "Screenshot (225).png",
+                title: "Game Play Page",
+                description: "Game page Made a HTML CSS Java Script."
+            },
+
+            {
+                image: "Screenshot (226).png",
+                title: "Result Page",
+                description: "Result Page Made a HTML CSS Java Script."
+            },
+
+
+        ];
+
+        function updateSlide3() {
+            const slider = document.getElementById("slider2");
+            slider.classList.remove("active");
+            setTimeout(() => {
+                slider.innerHTML = `
+                            <div class="image-section">
+                        <img src="${slides3[currentIndex3].image}" alt="Image">
+                    </div>
+                    <div class="text-section">
+                        <h2>${slides3[currentIndex3].title}</h2>
+                        <p>${slides3[currentIndex3].description}</p>
+                         <button style="background:black; color:white; padding:10px; border:none; cursor:pointer;"><a href="https://itssonutime.github.io/kbc-game/">Learn More</a></button>
+                    </div>
+                  
+                `;
+                slider.classList.add("active");
+            }, 500);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            updateSlide();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateSlide();
+        }
+
+        function prevSlide1() {
+            currentIndex2 = (currentIndex2 === 0) ? slides2.length - 1 : currentIndex2 - 1;
+            updateSlide2();
+        }
+
+        function nextSlide1() {
+            currentIndex2 = (currentIndex2 === slides2.length - 1) ? 0 : currentIndex2 + 1;
+            updateSlide2();
+        }
+
+        function prevSlide2() {
+            currentIndex3 = (currentIndex3 === 0) ? slides3.length - 1 : currentIndex3 - 1;
+            updateSlide3();
+        }
+
+        function nextSlide2() {
+            currentIndex3 = (currentIndex3 === slides3.length - 1) ? 0 : currentIndex3 + 1;
+            updateSlide3();
+        }
+
+
+
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+
+        function toggleText(button) {
+            let paragraph = button.previousElementSibling;
+            if (paragraph.style.display === "none" || paragraph.style.display === "") {
+                paragraph.style.display = "block";
+                button.textContent = "Read Less";
+            } else {
+                paragraph.style.display = "none";
+                button.textContent = "Read More";
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const testimonials = document.querySelectorAll(".testimonial");
+            testimonials.forEach((testimonial, index) => {
+                setTimeout(() => {
+                    testimonial.style.opacity = "1";
+                    testimonial.style.transform = "translateY(0)";
+                }, index * 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

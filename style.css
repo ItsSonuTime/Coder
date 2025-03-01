@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Pontano+Sans:wght@300..700&display=swap');
+ *{
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+ }
+ header{
+    min-height: 50vh;  
+    background-image: url(https://img.freepik.com/free-photo/glasses-lie-laptop-reflecting-light-from-screen-dark_169016-52267.jpg);
+     animation: fadeIn 1s ease-in-out;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+
+   
+  }
+  @keyframes fadeIn {
+   from {
+       opacity: 0;
+       transform: translateY(-20px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+
+   nav ul{
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content:flex-end;
+      align-items: center;
+    
+   
+   
+   }
+   nav li{
+      height: 60px;
+     
+      
+   
+  
+   }
+   nav a:hover{
+  
+         color: #00bfff;
+   
+   }
+
+  h2:hover{
+  
+      color: #00bfff;
+
+}
+h2:hover::after{
+      
+   width: 100%;
+
+   left: 0;
+}
+   nav a:hover::after{
+      
+         width: 100%;
+         left: 0;
+     }
+   
+   
+
+
+     h2{
+      position: relative;
+       margin-right: 10px;
+      /* padding: 10px; */
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+  }
+     nav a{
+      position: relative;
+       margin-right: 10px;
+      padding: 10px;
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+  }
+   nav a::after{
+ 
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: #00bfff;
+      transition: width 0.3s ease, left 0.3s ease;
+     }
+
+     #para{
+      font-size: 1.3rem;
+     }
+     h2::after{
+ 
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background-color: #00bfff;
+      transition: width 0.3s ease, left 0.3s ease;
+     }
+  
+  
+   nav a{
+      height: 100%;
+      padding:  0 30px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color:  white;
+      font-weight: bold;
+      font-size: 1.2rem;
+
+     
+   
+   }
+   button{
+      height: 40px;
+      width: 100px;
+      margin-top: 40px;
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+     
+   }
+
+
+   .tittle{
+    height: 300px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+   
+   
+   }
+   @media (max-width:700px) {
+      .tittle h1{
+     margin-left: 80px;
+      }
+      
+   }
+   nav li:first-child{
+      margin-right: auto;
+   }
+
+   .sidebar{
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 200px;
+      z-index: 999;
+      backdrop-filter: blur(5px);
+      background-color: none ;
+      box-shadow: -10px 0 10px rgb(0, 0, 0, 0.2);
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+   }
+
+   .sidebar li{
+     width: 100%; }
+  
+  .sidebar a{
+     width: 100%;
+  }
+  .menu-button{
+     display: none;
+  }
+  @media(max-width: 700px){
+     .hideOnMobile{
+        display: none;
+     }
+   .menu-button{
+     display: block;
+   }
+  }
+  
+  @media(max-width: 700px){
+     .sidebar{
+        width: 100%;
+     }
+  }
+  .container1 {
+   display: flex;
+     flex-wrap: wrap;
+     background: white;
+   height: 100%;
+   width: 100%;
+   justify-content: space-around;
+   padding-top: 40px;
+   /* padding: 50px; */
+}
+.card {
+   background: white;
+ 
+   width: 300px;
+   border: 2px solid silver;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   border-radius: 10px;
+   text-align: center;
+   margin-bottom: 50px;
+}
+.card img {
+    width: 80%;
+   margin-top: 15px;
+   border-radius: 10px;
+}
+.card h3 {
+   color:#213547;
+}
+.card span {
+   color: rgb(36, 35, 35);
+   display: none;
+}
+.btn {
+   display: inline-block;
+   padding: 10px 15px;
+   background: black;
+   color: white;
+   text-decoration: none;
+   border-radius: 5px;
+   margin-top: 10px;
+   cursor: pointer;
+}
+@media (max-width: 700px) {
+   .container {
+       flex-direction: column;
+
+       align-items: center;
+   }.card{
+         padding: 20px;
+   margin: 10px;
+   }
+}

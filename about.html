@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-size: cover;
+            animation: fadeIn 3s ease-in-out;
+            /* background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(https://t4.ftcdn.net/jpg/08/70/32/31/360_F_870323199_ajFBiDNHIlYPyy5Hdl0BOXuLFqLsirD6.jpg); */
+            background-color: white;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav a::after {
+
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background-color: #00bfff;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        nav a {
+            position: relative;
+            margin-right: 10px;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+
+        nav a:hover::after {
+
+            width: 100%;
+            left: 0;
+        }
+
+        nav ul {
+            width: 100%;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav li {
+            height: 70px;
+
+        }
+
+        nav a {
+            height: 100%;
+            padding: 0 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+
+        nav a:hover {
+
+            color: #00bfff;
+
+        }
+
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 999;
+            backdrop-filter: blur(10px);
+            background-color: transparent;
+            box-shadow: -10px 0 10px rgb(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar li {
+            width: 100%;
+        }
+
+        .sidebar a {
+            width: 100%;
+        }
+
+        .menu-button {
+            display: none;
+        }
+
+        @media(max-width: 800px) {
+            .hideOnMobile {
+                display: none;
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+        }
+
+        @media(max-width: 400px) {
+            .sidebar {
+                width: 100%;
+            }
+
+        }
+
+
+
+
+        .container {
+            height: 500px;
+            width: 600px;
+            background-color: transparent;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+            color: black;
+        }
+
+        img {
+
+            box-shadow: 0px 0px 10px black;
+        }
+
+
+        .containerbox {
+            height: 100%;
+
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+        }
+
+        #intro {
+            color: black;
+       
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        #intro1{
+          text-align: center;
+           margin-top: 10px;
+           margin-bottom: 10px;
+            color: black;
+    
+        }
+
+        #skills {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+         
+         
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            color: black;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        #int {
+            color: black;
+            padding-left: 20px;
+            padding-right: 10px;
+        }
+        #footer{
+            height: 70px;
+            width: 100%;
+         color: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+
+        }
+        h2::after{
+ 
+ content: "";
+ position: absolute;
+ left: 50%;
+ bottom: 0;
+ width: 0;
+ height: 3px;
+ background-color: #00bfff;
+ transition: width 0.3s ease, left 0.3s ease;
+}
+
+
+h2{
+      position: relative;
+ 
+       text-align: center;
+      /* padding: 10px; */
+      color: black;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+  }
+
+  h2:hover::after{
+      
+      width: 100%;
+   
+      left: 0;
+   }
+
+   h2:hover{
+  
+  color: #00bfff;
+
+}
+.fade-in{
+    padding-left: 12px;
+    padding-right: 10px;
+}
+    </style>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hidebar()><a href="#"><svg id="sidelogo" xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+                    <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">projects</a></li>
+            <li><a href="contact.html">contact-me</a></li>
+            <li><a href="about.html">About</a></li>
+       
+
+        </ul>
+
+
+
+        <ul>
+
+            <li class="hideOnMobile"><a href="project.html">projects</a></li>
+            <li class="hideOnMobile"><a href="contact.html">contact-me</a></li>
+            <li class="hideOnMobile"><a href="about.html">About</a></li>
+
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg id="sidelogo"
+                        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#5f6368">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+    <div class="containerbox">
+        <div class="container">
+            <h2>Happy_Coder</h2>
+
+            <img src="WhatsApp Image 2025-02-12 at 21.46.13_e9e10f50.jpg" alt="Profile Picture" height="300px">
+            <h2 class="slide-in">Hello, I'm a Full Stack Developer</h2>
+
+            <p class="fade-in">I specialize in building modern and responsive <br> web applications using HTML, CSS,
+              JavaScript.</p>
+
+        </div>
+
+
+    </div>  
+
+    <h2 class="slide-in"> Self Intorducation</h2>
+
+    <p id="int">First of All thank you for visit to our website its my pleasure that you come to see our website
+        My Self Sonu Gautam i from Gomti Nagar Lucknow ( Uttar Pradesh) I am belong to middle class family my Hobbies
+        are learning Programming and I like to Tech-Field
+        and my strength are i am hard Working and motivational person and most thing i am streaming person ,I am
+        dedicated and hard working condidate and positive , honesty
+        My short term goals is to achive a job in rupted company like a Microsoft , Amazon Apple , Tesla , Meta ,
+        Reliance , others and like a your Company
+        and My long-term goals is to achive higher position where i can build my career and help the organization too,
+        that is all about my self thank you so much.
+    </p>
+
+    <h2 class="slide-in">Skills</h2>
+
+
+    <ul id="skills">
+        <li><a href="https://www.w3schools.com/html/">HTML</a></li>
+        <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+        <li><a href="https://www.w3schools.com/js/default.asp">JAVA SCRIPT</a></li>
+        <li><a href="https://react.dev/">REACT.JS</a></li>
+        <li><a href="https://nextjs.org/">Next.JS</a></li>
+
+    </ul>
+
+     <div id="footer">
+        <p style="color: black;">©2025 - Happy_Coder Full_Stack_Web_Developer</p>
+     </div>
+    <script>
+
+
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>
+
+</body>
+
+</html>
